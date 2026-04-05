@@ -31,3 +31,16 @@ model User {
   updated_at DateTime  @updatedAt
   deleted_at DateTime?
 }
+
+model Product {
+  id         Int       @id @default(autoincrement())
+  name       String
+  category   String
+  brand      String
+  price      Float
+  stock      Int
+  sku_code   String    @unique
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+}
